@@ -1,0 +1,53 @@
+{
+  "name": "myhours-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for MyHours time tracking integration - read, summarize, and manage your time entries with Claude AI",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "myhours-mcp": "dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm run build"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "myhours",
+    "time-tracking",
+    "claude",
+    "ai",
+    "anthropic",
+    "productivity"
+  ],
+  "author": "Jonas Rodrigues <email@jonasrodrigues.pt>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jgrodrigues/myhours-mcp.git"
+  },
+  "files": [
+    "dist",
+    "src",
+    "tsconfig.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "tsx": "^4.7.0",
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0"
+  }
+}
